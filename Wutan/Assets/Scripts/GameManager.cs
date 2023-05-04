@@ -12,9 +12,14 @@ public class GameManager : MonoBehaviour
     public float MinDistanceFromPlayerToSpawn;
     public AnimationCurve Curve;
 
+
     void Awake()
     {
         Instance = this;
         spawners = new List<Spawner>();
+    }
+    private void Update()
+    {
+       
     }
 }
