@@ -9,7 +9,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Floor
   - Water
   - UI
   - 
@@ -47,4 +47,7 @@ TagManager:
     locked: 0
   - name: Wind
     uniqueID: 2798951207
+    locked: 0
+  - name: Floor
+    uniqueID: 1299741609
     locked: 0
