@@ -9,6 +9,7 @@ public class Character : MonoBehaviour
     [SerializeField] protected Collider2D Collider;
     [SerializeField] protected Rigidbody2D Rigidbody2D;
     [SerializeField] protected float Speed;
+    [SerializeField] protected float JumpForce;
 
     protected void Move(Vector3 direction)
     {
