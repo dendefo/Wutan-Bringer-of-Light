@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public static GameManager Instance;
+    public List<Spawner> spawners;
+    public PlayerScript PlayerScriptplayer;
+    public List<Enemy> Enemies;
+    public float MinDistanceFromPlayerToSpawn;
+    public AnimationCurve Curve;
+
+    void Awake()
     {
-        
+        Instance = this;
+        spawners = new List<Spawner>();
     }
 }
