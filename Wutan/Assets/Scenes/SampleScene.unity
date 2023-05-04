@@ -375,10 +375,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 631636059425950398, guid: 0787df94952814b4dbca88fea3de653f, type: 3}
-      propertyPath: Speed
-      value: 10000
-      objectReference: {fileID: 0}
     - target: {fileID: 1283384852132165093, guid: 0787df94952814b4dbca88fea3de653f, type: 3}
       propertyPath: m_Name
       value: Player
@@ -483,6 +479,14 @@ PrefabInstance:
     - target: {fileID: 5040086375204203582, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579869148666269560, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
+      propertyPath: m_Name
+      value: Floor Of Death
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579869148666269560, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
+      propertyPath: m_TagString
+      value: DeleteEnemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}

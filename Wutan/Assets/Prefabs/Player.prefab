@@ -50,7 +50,7 @@ MonoBehaviour:
   Renderer: {fileID: 9200942064625516154}
   Collider: {fileID: 1201414363619789231}
   Rigidbody2D: {fileID: 3303172137890537159}
-  Speed: 0
+  Speed: 1000
 --- !u!70 &1201414363619789231
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -11,4 +11,9 @@ public class PlayerScript : Character
         float x = Input.GetAxis("Horizontal") * Speed * Time.deltaTime ;
         Move(new Vector3(x, 0, 0));
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+    }
 }
