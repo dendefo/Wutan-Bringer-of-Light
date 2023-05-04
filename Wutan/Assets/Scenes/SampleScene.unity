@@ -297,7 +297,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 19.97
+  orthographic size: 40.9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -616,12 +616,28 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 631636059425950398, guid: 0787df94952814b4dbca88fea3de653f, type: 3}
+      propertyPath: JumpForce
+      value: 220
+      objectReference: {fileID: 0}
     - target: {fileID: 1283384852132165093, guid: 0787df94952814b4dbca88fea3de653f, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2384683563879255602, guid: 0787df94952814b4dbca88fea3de653f, type: 3}
       propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384683563879255602, guid: 0787df94952814b4dbca88fea3de653f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384683563879255602, guid: 0787df94952814b4dbca88fea3de653f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384683563879255602, guid: 0787df94952814b4dbca88fea3de653f, type: 3}
+      propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2384683563879255602, guid: 0787df94952814b4dbca88fea3de653f, type: 3}
@@ -663,6 +679,18 @@ PrefabInstance:
     - target: {fileID: 2384683563879255602, guid: 0787df94952814b4dbca88fea3de653f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384683563879255602, guid: 0787df94952814b4dbca88fea3de653f, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3303172137890537159, guid: 0787df94952814b4dbca88fea3de653f, type: 3}
+      propertyPath: m_LinearDrag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3303172137890537159, guid: 0787df94952814b4dbca88fea3de653f, type: 3}
+      propertyPath: m_GravityScale
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0787df94952814b4dbca88fea3de653f, type: 3}
@@ -749,33 +777,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 343195321930089985, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 544784474302553940, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
-      propertyPath: m_Size.x
-      value: 34.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 544784474302553940, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 38.4
-      objectReference: {fileID: 0}
     - target: {fileID: 601207331254719852, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
       propertyPath: m_Name
       value: Map
-      objectReference: {fileID: 0}
-    - target: {fileID: 2400296472797569966, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
-      propertyPath: m_Size.x
-      value: 68.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3870044736141025160, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4650290075877228256, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5040086375204203582, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
       propertyPath: m_RootOrder
@@ -820,34 +824,6 @@ PrefabInstance:
     - target: {fileID: 5040086375204203582, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579869148666269560, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
-      propertyPath: m_Name
-      value: Floor Of Death
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579869148666269560, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
-      propertyPath: m_TagString
-      value: DeleteEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 5921039608166299010, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6863104537900764080, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
-      propertyPath: m_Size.x
-      value: 38.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8790537518261548874, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
-      propertyPath: m_Size.x
-      value: 64.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 8790537518261548874, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 68.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8936206403918381736, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
-      propertyPath: Length
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}

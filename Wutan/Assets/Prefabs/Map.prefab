@@ -50,8 +50,8 @@ GameObject:
   - component: {fileID: 7079135994874496472}
   - component: {fileID: 2456389435459877468}
   m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
+  m_Name: Floor Of Death
+  m_TagString: DeleteEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,11 +114,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3747067243635987853, guid: 453a549007fe29c49bdf03bf928909d0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.2
+      value: -17.6
       objectReference: {fileID: 0}
     - target: {fileID: 3747067243635987853, guid: 453a549007fe29c49bdf03bf928909d0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.4
+      value: 34.5
       objectReference: {fileID: 0}
     - target: {fileID: 3747067243635987853, guid: 453a549007fe29c49bdf03bf928909d0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -464,7 +464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3747067243635987853, guid: 453a549007fe29c49bdf03bf928909d0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.3
+      value: 16.9
       objectReference: {fileID: 0}
     - target: {fileID: 3747067243635987853, guid: 453a549007fe29c49bdf03bf928909d0, type: 3}
       propertyPath: m_LocalPosition.z
