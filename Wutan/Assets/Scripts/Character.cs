@@ -8,6 +8,7 @@ public class Character : MonoBehaviour
     [SerializeField] protected SpriteRenderer Renderer;
     [SerializeField] protected Collider2D Collider;
     [SerializeField] protected Rigidbody2D Rigidbody2D;
+    [SerializeField] protected Animator animator;
     [SerializeField] protected float Speed;
     [SerializeField] protected float JumpForce;
 
