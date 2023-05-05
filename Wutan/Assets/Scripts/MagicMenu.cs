@@ -23,16 +23,19 @@ public class MagicMenu : MonoBehaviour
             menu.enabled = isShowing;
             Vector2 mousePos = Input.mousePosition;
             Parent.transform.position = mousePos;
-            if (MagicMenuButtons.chosen != null)
-            {
-                Debug.Log(MagicMenuButtons.chosen.ability.ToString());
 
-            }
+            
         }
         else if(Input.GetMouseButtonUp(1))
         {
             isShowing = false;
             menu.enabled = isShowing;
+            if (MagicMenuButtons.chosen != null)
+            {
+                Debug.Log(MagicMenuButtons.chosen.ability.ToString());
+
+            }
+
         }
         
 
