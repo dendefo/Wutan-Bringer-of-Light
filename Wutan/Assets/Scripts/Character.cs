@@ -11,8 +11,20 @@ public class Character : MonoBehaviour
     [SerializeField] protected Animator animator;
     [SerializeField] protected float Speed;
     [SerializeField] protected float JumpForce;
-    protected bool isTouchingFloor = true;
+
+    bool _isLookingRight;
+    public bool IsLookingRight
+    {
+        get { return _isLookingRight; }
+        set { if (value != _isLookingRight) transform.Rotate(new Vector3(0, 180, 0)); _isLookingRight = value; }
+    }
+
+    [SerializeField]protected bool isTouchingFloor = true;
     protected void Move(Vector3 direction)
+    {
+        transform.Translate(direction,Space.World);
+    }
+    protected void Jump(Vector3 direction)
     {
         Rigidbody2D.AddForce(direction);
     }

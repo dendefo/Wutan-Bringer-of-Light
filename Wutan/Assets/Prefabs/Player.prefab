@@ -53,8 +53,8 @@ MonoBehaviour:
   Collider: {fileID: 1201414363619789231}
   Rigidbody2D: {fileID: 3303172137890537159}
   animator: {fileID: 7047946607482071663}
-  Speed: 750
-  JumpForce: 1200
+  Speed: 10
+  JumpForce: 7000
 --- !u!70 &1201414363619789231
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -276,6 +276,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2384683563879255602}
     m_Modifications:
+    - target: {fileID: -9125793651526773660, guid: d4ec3bcd4fcac234a9725eac47f05a2e, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -8653719598885068355, guid: d4ec3bcd4fcac234a9725eac47f05a2e, type: 3}
       propertyPath: m_Name
       value: wutan assembeld 1
