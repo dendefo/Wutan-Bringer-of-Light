@@ -11,6 +11,7 @@ public class MagicMenu : MonoBehaviour
     public GameObject Parent;
     public float LastClick;
     public float delay = 0.1f;
+    [SerializeField] Transform Staff;
     private void Start()
     {
         menu.enabled = false;
@@ -40,7 +41,7 @@ public class MagicMenu : MonoBehaviour
         {
             if (MagicMenuButtons.chosen != null&& !isShowing)
             {
-                Instantiate(MagicMenuButtons.chosen.prefab, GameManager.Instance.PlayerScriptplayer.transform.position, MagicMenuButtons.chosen.prefab.transform.rotation, null);
+                Instantiate(MagicMenuButtons.chosen.prefab, Staff.position+ MagicMenuButtons.chosen.prefab.transform.position, MagicMenuButtons.chosen.prefab.transform.rotation, null);
 
             }
             isShowing = false;

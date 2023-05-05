@@ -38622,7 +38622,7 @@ Transform:
   m_GameObject: {fileID: 3072194242040583566}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -2, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3072194241376409636}
@@ -43727,6 +43727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e7e8965d507ea3439f9d4568c58b221, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeFromStart: 0
 --- !u!58 &3003381151833363228
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -48671,7 +48672,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 7
+  m_PointLightOuterRadius: 30
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1

@@ -8,7 +8,10 @@ public class ShieldScript : MonoBehaviour
     private void Update()
     {
         timeFromStart+= Time.deltaTime;
-        if(timeFromStart>6) Destroy(gameObject);
+        if(timeFromStart>10) Destroy(gameObject);
+        transform.position = GameManager.Instance.PlayerScriptplayer.Stuuf.transform.position;
+        transform.position= new(transform.position.x,transform.position.y-12);
+
     }
     private void OnParticleSystemStopped()
     {

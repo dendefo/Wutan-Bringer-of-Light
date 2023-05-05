@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5352617011483816280}
   - component: {fileID: 5352617011483816286}
   - component: {fileID: 5352617011483816287}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MiniSingleEndLightEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4823,7 +4823,7 @@ GameObject:
   - component: {fileID: 5352617011635556927}
   - component: {fileID: 5352617011635556925}
   - component: {fileID: 5352617011635556926}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpreadRaysTexture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9635,7 +9635,7 @@ GameObject:
   - component: {fileID: 5352617012424658645}
   - component: {fileID: 5352617012424658635}
   - component: {fileID: 5352617012424658644}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LightSwirlTrailsRibbons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14423,7 +14423,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1432380603
-  m_SortingLayer: 1
+  m_SortingLayer: 5
   m_SortingOrder: 7
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -14466,7 +14466,7 @@ GameObject:
   - component: {fileID: 5352617012650469617}
   - component: {fileID: 5352617012650469623}
   - component: {fileID: 5352617012650469616}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LightReflect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14481,9 +14481,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5352617012650469618}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5352617013074087106}
   - {fileID: 5352617012813877645}
@@ -19251,7 +19251,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1432380603
-  m_SortingLayer: 1
+  m_SortingLayer: 5
   m_SortingOrder: 5
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -19294,7 +19294,7 @@ GameObject:
   - component: {fileID: 5352617012734299056}
   - component: {fileID: 5352617012734299062}
   - component: {fileID: 5352617012734299063}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LightRaysSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24109,7 +24109,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1432380603
-  m_SortingLayer: 1
+  m_SortingLayer: 5
   m_SortingOrder: -1
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -24152,9 +24152,12 @@ GameObject:
   - component: {fileID: 5352617012794848707}
   - component: {fileID: 5352617012794848716}
   - component: {fileID: 5352617012794848717}
-  m_Layer: 0
+  - component: {fileID: 6212851526919749311}
+  - component: {fileID: 3832638918704430822}
+  - component: {fileID: -1639746368937142176}
+  m_Layer: 6
   m_Name: LightBurst 1
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24167,12 +24170,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5352617012794848718}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: -12, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5352617012650469617}
   - {fileID: 5352617012905185792}
+  - {fileID: 5079526837120644765}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
@@ -24251,7 +24255,7 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
+  scalingMode: 0
   randomSeed: 0
   InitialModule:
     serializedVersion: 3
@@ -28942,7 +28946,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1432380603
-  m_SortingLayer: 1
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -28974,6 +28978,51 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!111 &6212851526919749311
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5352617012794848718}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: fcd057b7f0b0a2d479ac2f080f509db4, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: fcd057b7f0b0a2d479ac2f080f509db4, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 1
+  m_CullingType: 0
+--- !u!58 &3832638918704430822
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5352617012794848718}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.0001
+--- !u!114 &-1639746368937142176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5352617012794848718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7e8965d507ea3439f9d4568c58b221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeFromStart: 0
 --- !u!1 &5352617012813877646
 GameObject:
   m_ObjectHideFlags: 0
@@ -28985,7 +29034,7 @@ GameObject:
   - component: {fileID: 5352617012813877645}
   - component: {fileID: 5352617012813877635}
   - component: {fileID: 5352617012813877644}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LightDots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33772,7 +33821,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1432380603
-  m_SortingLayer: 1
+  m_SortingLayer: 5
   m_SortingOrder: 6
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -33815,7 +33864,7 @@ GameObject:
   - component: {fileID: 5352617012905185792}
   - component: {fileID: 5352617012905185798}
   - component: {fileID: 5352617012905185799}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LightSwirlTrailsParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38604,7 +38653,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1432380603
-  m_SortingLayer: 1
+  m_SortingLayer: 5
   m_SortingOrder: 6
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -38647,7 +38696,7 @@ GameObject:
   - component: {fileID: 5352617013074087106}
   - component: {fileID: 5352617013074087104}
   - component: {fileID: 5352617013074087105}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: OuterRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38662,7 +38711,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5352617013074087107}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 2}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43565,7 +43614,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1432380603
-  m_SortingLayer: 1
+  m_SortingLayer: 5
   m_SortingOrder: -5
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -43608,7 +43657,7 @@ GameObject:
   - component: {fileID: 5352617013274128756}
   - component: {fileID: 5352617013274128746}
   - component: {fileID: 5352617013274128747}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LightRaysLarge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48414,7 +48463,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1432380603
-  m_SortingLayer: 1
+  m_SortingLayer: 5
   m_SortingOrder: -2
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -48446,3 +48495,110 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!1 &6050888974654469244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5079526837120644765}
+  - component: {fileID: 2940110636639355790}
+  m_Layer: 6
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5079526837120644765
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050888974654469244}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5352617012794848707}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &2940110636639355790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050888974654469244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.2
+  m_LightVolumeIntensity: 1
+  m_LightVolumeIntensityEnabled: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensity: 0.75
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_Vertices:
+  - position: {x: 0.9985302, y: 0.9985302, z: 0}
+    color: {r: 0.70710677, g: 0.70710677, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: 0.9985302, y: 0.9985302, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  - position: {x: -0.9985302, y: 0.9985302, z: 0}
+    color: {r: -0.70710677, g: 0.70710677, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: -0.9985302, y: 0.9985302, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  - position: {x: -0.99853003, y: -0.9985304, z: 0}
+    color: {r: -0.70710665, g: -0.7071069, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: -0.99853003, y: -0.9985304, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  - position: {x: 0.99853003, y: -0.9985304, z: 0}
+    color: {r: 0.70710665, g: -0.7071069, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: 0.99853003, y: -0.9985304, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  - position: {x: 0, y: 0, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  m_Triangles: 030001000800020000000100030002000100050003000800040002000300050004000300070005000800060004000500070006000500010007000800000006000700010000000700
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 30
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath: []

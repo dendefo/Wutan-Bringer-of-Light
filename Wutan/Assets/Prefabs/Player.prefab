@@ -102,8 +102,10 @@ MonoBehaviour:
   Rigidbody2D: {fileID: 3303172137890537159}
   animator: {fileID: 7047946607482071663}
   Speed: 10
-  JumpForce: 3500
+  JumpForce: 7000
   isTouchingFloor: 1
+  MaxEnemyDistance: 6
+  Stuuf: {fileID: 815384892274151066}
 --- !u!70 &1201414363619789231
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

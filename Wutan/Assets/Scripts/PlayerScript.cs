@@ -5,7 +5,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerScript : Character
 {
-    
+    [SerializeField] public float MaxEnemyDistance;
+    [SerializeField] public Transform Stuuf;
     private void Update()
     {
 
