@@ -293,17 +293,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2660809102007403331, guid: 75f5047ee23d4bf47a5fc915466f4848, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2660809102192462852, guid: 75f5047ee23d4bf47a5fc915466f4848, type: 3}
       propertyPath: m_Name
       value: MagicMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 2660809102192462852, guid: 75f5047ee23d4bf47a5fc915466f4848, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2660809102192462862, guid: 75f5047ee23d4bf47a5fc915466f4848, type: 3}
       propertyPath: m_Pivot.x
@@ -1064,10 +1056,6 @@ PrefabInstance:
     - target: {fileID: 5040086375204203582, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7079135994874496472, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 26384.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cf902dc7f0daeb40b4e0df33ee54097, type: 3}
