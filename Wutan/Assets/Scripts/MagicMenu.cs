@@ -49,6 +49,5 @@ public class MagicMenu : MonoBehaviour
             
 
         }
-        
     }
 }
