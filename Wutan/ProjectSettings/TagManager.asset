@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DeleteEnemy
   - Floor
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - Floor
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
@@ -51,4 +52,7 @@ TagManager:
     locked: 0
   - name: Floor
     uniqueID: 1299741609
+    locked: 0
+  - name: VFX
+    uniqueID: 1991699845
     locked: 0

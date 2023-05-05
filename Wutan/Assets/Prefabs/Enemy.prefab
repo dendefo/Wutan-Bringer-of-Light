@@ -131,10 +131,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e426004e51f3c5049a057cfd7afc6e03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Renderer: {fileID: 0}
-  Collider: {fileID: 0}
-  Rigidbody2D: {fileID: 0}
-  Speed: 0
+  Renderer: {fileID: 3527818104783770180}
+  Collider: {fileID: 8704045225486874933}
+  Rigidbody2D: {fileID: 7828591289500564037}
+  animator: {fileID: 0}
+  Speed: 300
+  JumpForce: 0
 --- !u!50 &7828591289500564037
 Rigidbody2D:
   serializedVersion: 4
@@ -165,10 +167,10 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 497540125558845510}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 9be7007c3ffee7d44909d4a1442d11c9, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
+  m_Size: {x: 1, y: 2}
   m_Direction: 0

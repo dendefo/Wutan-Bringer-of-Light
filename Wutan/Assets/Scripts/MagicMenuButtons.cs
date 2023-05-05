@@ -8,6 +8,7 @@ public class MagicMenuButtons : MonoBehaviour,IPointerEnterHandler
 {
     public Abilities ability;
     static public MagicMenuButtons chosen;
+    public GameObject prefab;
 
     public void OnPointerEnter(PointerEventData eventData)
     {

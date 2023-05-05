@@ -5,7 +5,17 @@ using UnityEngine.InputSystem;
 
 public class PlayerScript : Character
 {
-    private bool isTouchingFloor = true;
+    bool _isLookingRight;
+    bool IsLookingRight
+    {
+        get { return _isLookingRight; }
+        set { if (value != _isLookingRight) transform.Rotate(new Vector3(0, 180, 0)); _isLookingRight = value; }
+    }
+    private void Update()
+    {
+
+        if (Input.GetMouseButtonDown(0)) animator.SetTrigger("Attack");
+    }
     private void FixedUpdate()
     {
         float x = Input.GetAxis("Horizontal") * Speed * Time.deltaTime;
@@ -16,26 +26,10 @@ public class PlayerScript : Character
         if (Rigidbody2D.velocity.y < 0f) animator.SetBool("Fall", true);
 
         Move(new Vector3(x, y, 0));
+        if (Rigidbody2D.velocity.x < -0.1f) IsLookingRight = false;
+        if (Rigidbody2D.velocity.x > 0.1f) IsLookingRight = true;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
-        if (collision.collider.tag == "Floor" && transform.position.y > collision.transform.position.y)
-        {
-            animator.SetBool("Floored", true);
-            isTouchingFloor = true;
-        }
-
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.collider.tag == "Floor" && transform.position.y > collision.transform.position.y)
-        {
-            animator.SetTrigger("Jump");
-            isTouchingFloor = false;
-        }
-    }
     public void ResetFallBool()
     {
         animator.SetBool("Fall", false);
@@ -49,4 +43,5 @@ public class PlayerScript : Character
     {
 
     }
+    
 }

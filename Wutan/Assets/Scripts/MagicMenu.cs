@@ -9,6 +9,8 @@ public class MagicMenu : MonoBehaviour
     public Canvas menu; // Assign in inspector
     private bool isShowing;
     public GameObject Parent;
+    public float LastClick;
+    public float delay = 0.1f;
     private void Start()
     {
         menu.enabled = false;
@@ -16,30 +18,35 @@ public class MagicMenu : MonoBehaviour
 
     private void Update()
     {
+
         if (Input.GetMouseButtonDown(1))
         {
+            LastClick = Time.time;
 
-            isShowing = true;
-            menu.enabled = isShowing;
-            Vector2 mousePos = Input.mousePosition;
-            Parent.transform.position = mousePos;
-
-            
         }
-        else if(Input.GetMouseButtonUp(1))
+        else if (Input.GetMouseButton(1))
         {
-            isShowing = false;
+            if (Time.time < LastClick + delay) return;
+
             menu.enabled = isShowing;
-            if (MagicMenuButtons.chosen != null)
+            if (!isShowing)
             {
-                Debug.Log(MagicMenuButtons.chosen.ability.ToString());
+                Vector2 mousePos = Input.mousePosition;
+                Parent.transform.position = mousePos;
+            }
+            isShowing = true;
+        }
+        else if (Input.GetMouseButtonUp(1))
+        {
+            if (MagicMenuButtons.chosen != null&& !isShowing)
+            {
+                Instantiate(MagicMenuButtons.chosen.prefab, GameManager.Instance.PlayerScriptplayer.transform.position, MagicMenuButtons.chosen.prefab.transform.rotation, null);
 
             }
+            isShowing = false;
+            menu.enabled = isShowing;
+            
 
         }
-        
-
-
-
     }
 }
