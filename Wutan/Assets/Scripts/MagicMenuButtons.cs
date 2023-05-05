@@ -12,7 +12,6 @@ public class MagicMenuButtons : MonoBehaviour,IPointerEnterHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-
         chosen = this;
     }
 }
