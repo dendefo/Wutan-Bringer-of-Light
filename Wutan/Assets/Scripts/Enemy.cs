@@ -38,4 +38,8 @@ public class Enemy : Character
         base.OnTriggerEnter2D(collision.collider);
         if (collision.collider.tag == "Weapon") Rigidbody2D.AddForce(collision.transform.position - transform.position * -100);
     }
+    private void OnDestroy()
+    {
+        GameManager.Instance.Enemies.Remove(this);
+    }
 }

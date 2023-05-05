@@ -44,15 +44,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Lights
-    uniqueID: 1432380603
+  - name: Floor
+    uniqueID: 1299741609
+    locked: 0
+  - name: Player
+    uniqueID: 2888539279
     locked: 0
   - name: Wind
     uniqueID: 2798951207
     locked: 0
-  - name: Floor
-    uniqueID: 1299741609
-    locked: 0
   - name: VFX
     uniqueID: 1991699845
+    locked: 0
+  - name: Lights
+    uniqueID: 1432380603
     locked: 0
