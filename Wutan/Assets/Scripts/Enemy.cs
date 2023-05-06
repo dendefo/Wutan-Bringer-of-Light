@@ -13,12 +13,13 @@ public class Enemy : Character
     }
     private void FixedUpdate()
     {
-
+        if (GameManager.Instance.PlayerScriptplayer.transform.position.x < transform.position.x) IsLookingRight = false;
+        else IsLookingRight = true;
         if (isDread)
         {
-            if (Vector3.Distance(GameManager.Instance.PlayerScriptplayer.transform.position, transform.position) < DreadDistance)
-
+            if (Vector3.Distance(GameManager.Instance.PlayerScriptplayer.transform.position, transform.position) > DreadDistance)
                 return;
+            else animator.SetBool("Attack",true);
         }
 
         Vector3 direction;
@@ -45,8 +46,7 @@ public class Enemy : Character
 
         Move(new Vector3(x, 0, 0));
         Jump(new Vector3(0, y, 0));
-        if (GameManager.Instance.PlayerScriptplayer.transform.position.x < transform.position.x) IsLookingRight = false;
-        else IsLookingRight = true;
+        
         if (Mathf.Abs(x) > 0.1f)
         {
             try { animator.SetBool("Walk", true); }
@@ -60,8 +60,8 @@ public class Enemy : Character
 
         if (collision.tag == "Weapon")
         {
-            Rigidbody2D.AddForce((collision.transform.position - transform.position) * -TakeDamageForce);
-            Debug.Log("Trigger");
+            Rigidbody2D.AddForce((collision.transform.position - transform.position) * -TakeDamageForce,ForceMode2D.Impulse);
+            //Debug.Log("Trigger");
             animator.SetTrigger("Hit");
         }
     }
@@ -70,7 +70,7 @@ public class Enemy : Character
         base.OnTriggerEnter2D(collision.collider);
         if (collision.collider.tag == "Weapon")
         {
-            Rigidbody2D.AddForce((collision.transform.position - transform.position) * -TakeDamageForce);
+            Rigidbody2D.AddForce((collision.transform.position - transform.position) * -TakeDamageForce, ForceMode2D.Impulse);
             animator.SetTrigger("Hit");
         }
     }
@@ -78,7 +78,7 @@ public class Enemy : Character
     {
         if (collision.collider.tag == "Weapon")
         {
-            Rigidbody2D.AddForce((collision.transform.position - transform.position) * -TakeDamageForce);
+            Rigidbody2D.AddForce((collision.transform.position - transform.position) * -TakeDamageForce, ForceMode2D.Impulse);
         }
     }
     private void OnDestroy()

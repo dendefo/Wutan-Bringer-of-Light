@@ -16,13 +16,13 @@ public class Spawner : MonoBehaviour
 
     void Update()
     {
-        if (Time.time > LastSpawnTime + SpawnRate)
+        if (Time.timeSinceLevelLoad > LastSpawnTime + SpawnRate)
         {
             if (Vector3.Distance(transform.position, GameManager.Instance.PlayerScriptplayer.transform.position) > GameManager.Instance.MinDistanceFromPlayerToSpawn)
             {
-                if (GameManager.Instance.Curve.Evaluate(Time.time) <= GameManager.Instance.Enemies.Count) return;
+                if (GameManager.Instance.Curve.Evaluate(Time.timeSinceLevelLoad) <= GameManager.Instance.Enemies.Count) return;
                 Instantiate(EnemyPrefabs[Random.Range(0, EnemyPrefabs.Count)],transform.position,Quaternion.identity,null);
-                LastSpawnTime = Time.time;
+                LastSpawnTime = Time.timeSinceLevelLoad;
             }
         }
     }

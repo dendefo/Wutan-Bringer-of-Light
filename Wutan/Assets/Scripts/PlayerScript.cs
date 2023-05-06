@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerScript : Character
 {
+    public int MaxHP;
+    public int CurrentHp;
     [SerializeField] public float MaxEnemyDistance;
     [SerializeField] public Transform Stuuf;
     private void Update()
@@ -37,9 +39,15 @@ public class PlayerScript : Character
         animator.SetBool("Floored", false);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        base.OnCollisionEnter2D(collision);
+        if (collision.collider.tag == "Enemy") CurrentHp--;
+        if (CurrentHp <= 0) GameManager.Instance.Die();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
+        if (collision.tag == "DeleteEnemy") GameManager.Instance.Die();
     }
-    
+
 }

@@ -7,9 +7,12 @@ public class ResetBools : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.SetBool("Floored",false);
-        animator.SetBool("Fall", false);
-        animator.SetBool("Walk", false);
+        try { animator.SetBool("Floored", false); }
+        catch { }
+        try { animator.SetBool("Fall", false); }
+        catch { }
+        try { animator.SetBool("Walk", false); }
+        catch { }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -22,7 +25,8 @@ public class ResetBools : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
-        animator.SetBool("Attack", false);
+        try { animator.SetBool("Attack", false); }
+        catch { }
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

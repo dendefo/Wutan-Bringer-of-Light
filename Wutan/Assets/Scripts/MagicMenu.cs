@@ -21,9 +21,12 @@ public class MagicMenu : MonoBehaviour
     [SerializeField] public float LastUseForLight = 0;
     [SerializeField] public float LastUseForAir = 0;
 
+    public static MagicMenu instance;
+
     private void Start()
     {
         menu.enabled = false;
+        instance= this;
     }
 
     private void Update()
@@ -31,18 +34,19 @@ public class MagicMenu : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            LastClick = Time.time;
+            LastClick = Time.timeSinceLevelLoad;
 
         }
         else if (Input.GetMouseButton(1))
         {
-            if (Time.time < LastClick + delay) return;
+            if (Time.timeSinceLevelLoad < LastClick + delay) return;
 
             menu.enabled = isShowing;
             if (!isShowing)
             {
                 Vector2 mousePos = Input.mousePosition;
                 Parent.transform.position = mousePos;
+                Time.timeScale = 0.1f;
             }
             isShowing = true;
         }
@@ -53,24 +57,24 @@ public class MagicMenu : MonoBehaviour
                 switch (MagicMenuButtons.chosen.ability)
                 {
                     case Abilities.Fire:
-                        if (Time.time - LastUseForFire <= CDForFire)
+                        if (Time.timeSinceLevelLoad - LastUseForFire <= CDForFire)
                             return;
-                        LastUseForFire = Time.time;
+                        LastUseForFire = Time.timeSinceLevelLoad;
                         break;
                     case Abilities.Air:
-                        if (Time.time - LastUseForAir <= CDForAir)
+                        if (Time.timeSinceLevelLoad - LastUseForAir <= CDForAir)
                             return;
-                        LastUseForFire = Time.time;
+                        LastUseForAir = Time.timeSinceLevelLoad;
                         break;
                     case Abilities.Light:
-                        if (Time.time - LastUseForLight <= CDForLight)
+                        if (Time.timeSinceLevelLoad - LastUseForLight <= CDForLight)
                             return;
-                        LastUseForLight = Time.time;
+                        LastUseForLight = Time.timeSinceLevelLoad;
                         break;
                     case Abilities.Thunder:
-                        if (Time.time - LastUseForThunder <= CDForThunder)
+                        if (Time.timeSinceLevelLoad - LastUseForThunder <= CDForThunder)
                             return;
-                        LastUseForThunder = Time.time;
+                        LastUseForThunder = Time.timeSinceLevelLoad;
                         break;
                 }
                 Instantiate(MagicMenuButtons.chosen.prefab, Staff.position+ MagicMenuButtons.chosen.prefab.transform.position, MagicMenuButtons.chosen.prefab.transform.rotation, null);
@@ -78,6 +82,7 @@ public class MagicMenu : MonoBehaviour
             isShowing = false;
             menu.enabled = isShowing;
 
+            Time.timeScale = 1;
 
         }
 
