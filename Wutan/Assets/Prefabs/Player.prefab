@@ -135,7 +135,11 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
   m_Mass: 5.977691
+<<<<<<< Updated upstream
   m_LinearDrag: 2
+=======
+  m_LinearDrag: 0
+>>>>>>> Stashed changes
   m_AngularDrag: 0.05
   m_GravityScale: 6
   m_Material: {fileID: 0}
@@ -465,7 +469,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6252787317814044626, guid: d4ec3bcd4fcac234a9725eac47f05a2e, type: 3}
       propertyPath: m_Bounds.m_Center.y
+<<<<<<< Updated upstream
       value: -0.0019245148
+=======
+      value: 0.00617218
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -6252787317814044626, guid: d4ec3bcd4fcac234a9725eac47f05a2e, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -473,7 +481,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6252787317814044626, guid: d4ec3bcd4fcac234a9725eac47f05a2e, type: 3}
       propertyPath: m_Bounds.m_Extent.y
+<<<<<<< Updated upstream
       value: 3.8140402
+=======
+      value: 3.806171
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -5315990554067949956, guid: d4ec3bcd4fcac234a9725eac47f05a2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -513,7 +525,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2620204017313316513, guid: d4ec3bcd4fcac234a9725eac47f05a2e, type: 3}
       propertyPath: m_Bounds.m_Center.y
+<<<<<<< Updated upstream
       value: -0.9292002
+=======
+      value: -0.92984486
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -2620204017313316513, guid: d4ec3bcd4fcac234a9725eac47f05a2e, type: 3}
       propertyPath: m_Bounds.m_Extent.x
@@ -521,6 +537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2620204017313316513, guid: d4ec3bcd4fcac234a9725eac47f05a2e, type: 3}
       propertyPath: m_Bounds.m_Extent.y
+<<<<<<< Updated upstream
       value: 6.9041605
       objectReference: {fileID: 0}
     - target: {fileID: -2517880679814955208, guid: d4ec3bcd4fcac234a9725eac47f05a2e, type: 3}
@@ -530,6 +547,9 @@ PrefabInstance:
     - target: {fileID: -2517880679814955208, guid: d4ec3bcd4fcac234a9725eac47f05a2e, type: 3}
       propertyPath: m_SortingLayerID
       value: -1406428017
+=======
+      value: 6.903304
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -2114717017327982363, guid: d4ec3bcd4fcac234a9725eac47f05a2e, type: 3}
       propertyPath: m_LocalPosition.x

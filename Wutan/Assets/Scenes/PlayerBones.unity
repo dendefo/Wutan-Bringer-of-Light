@@ -558,7 +558,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 08830352c6eb5324d98ff8862e73edb3, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream
       value: 3
+=======
+      value: 2
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 08830352c6eb5324d98ff8862e73edb3, type: 3}
       propertyPath: m_LocalScale.x
@@ -848,7 +852,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: d4ec3bcd4fcac234a9725eac47f05a2e, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream
       value: 2
+=======
+      value: 1
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: d4ec3bcd4fcac234a9725eac47f05a2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -864,7 +872,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: d4ec3bcd4fcac234a9725eac47f05a2e, type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< Updated upstream
       value: -23.01
+=======
+      value: 0.59848
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: d4ec3bcd4fcac234a9725eac47f05a2e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -904,6 +916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 4843985084834002234, guid: d4ec3bcd4fcac234a9725eac47f05a2e, type: 3}
+<<<<<<< Updated upstream
 --- !u!1 &1326485584 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8653719598885068355, guid: d4ec3bcd4fcac234a9725eac47f05a2e, type: 3}
@@ -929,6 +942,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1925268967
 GameObject:
   m_ObjectHideFlags: 0
