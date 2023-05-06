@@ -17,11 +17,15 @@ public class PauseMenuScript : MonoBehaviour
             }
             else
             {
-                PauseMenu.SetActive(false);
-                GameManager.Instance.HUD.SetActive(true);
-                Time.timeScale = 1.0f;
+                Unpause();
             }
             
         }
+    }
+    public void Unpause()
+    {
+        PauseMenu.SetActive(false);
+        GameManager.Instance.HUD.SetActive(true);
+        Time.timeScale = 1.0f;
     }
 }
