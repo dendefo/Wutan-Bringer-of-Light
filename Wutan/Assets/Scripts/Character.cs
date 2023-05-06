@@ -7,7 +7,7 @@ public class Character : MonoBehaviour
 {
     [SerializeField] protected SpriteRenderer Renderer;
     [SerializeField] protected Collider2D Collider;
-    [SerializeField] public Rigidbody2D Rigidbody2D;
+    [SerializeField] protected Rigidbody2D Rigidbody2D;
     [SerializeField] protected Animator animator;
     [SerializeField] protected float Speed;
     [SerializeField] protected float JumpForce;
@@ -19,7 +19,7 @@ public class Character : MonoBehaviour
         set { if (value != _isLookingRight) transform.Rotate(new Vector3(0, 180, 0)); _isLookingRight = value; }
     }
 
-    [SerializeField]protected bool isTouchingFloor = false;
+    [SerializeField]protected bool isTouchingFloor = true;
     protected void Move(Vector3 direction)
     {
         transform.Translate(direction,Space.World);

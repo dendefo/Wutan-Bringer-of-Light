@@ -12,21 +12,9 @@ public class MagicMenu : MonoBehaviour
     public float LastClick;
     public float delay = 0.1f;
     [SerializeField] Transform Staff;
-    [SerializeField] public float CDForFire;
-    [SerializeField] public float CDForThunder;
-    [SerializeField] public float CDForLight;
-    [SerializeField] public float CDForAir;
-    [SerializeField] public float LastUseForFire = 0;
-    [SerializeField] public float LastUseForThunder = 0;
-    [SerializeField] public float LastUseForLight = 0;
-    [SerializeField] public float LastUseForAir = 0;
-
-    public static MagicMenu instance;
-
     private void Start()
     {
         menu.enabled = false;
-        instance= this;
     }
 
     private void Update()
@@ -34,19 +22,18 @@ public class MagicMenu : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            LastClick = Time.timeSinceLevelLoad;
+            LastClick = Time.time;
 
         }
         else if (Input.GetMouseButton(1))
         {
-            if (Time.timeSinceLevelLoad < LastClick + delay) return;
+            if (Time.time < LastClick + delay) return;
 
             menu.enabled = isShowing;
             if (!isShowing)
             {
                 Vector2 mousePos = Input.mousePosition;
                 Parent.transform.position = mousePos;
-                Time.timeScale = 0.1f;
             }
             isShowing = true;
         }
@@ -54,37 +41,13 @@ public class MagicMenu : MonoBehaviour
         {
             if (MagicMenuButtons.chosen != null&& !isShowing)
             {
-                switch (MagicMenuButtons.chosen.ability)
-                {
-                    case Abilities.Fire:
-                        if (Time.timeSinceLevelLoad - LastUseForFire <= CDForFire)
-                            return;
-                        LastUseForFire = Time.timeSinceLevelLoad;
-                        break;
-                    case Abilities.Air:
-                        if (Time.timeSinceLevelLoad - LastUseForAir <= CDForAir)
-                            return;
-                        LastUseForAir = Time.timeSinceLevelLoad;
-                        break;
-                    case Abilities.Light:
-                        if (Time.timeSinceLevelLoad - LastUseForLight <= CDForLight)
-                            return;
-                        LastUseForLight = Time.timeSinceLevelLoad;
-                        break;
-                    case Abilities.Thunder:
-                        if (Time.timeSinceLevelLoad - LastUseForThunder <= CDForThunder)
-                            return;
-                        LastUseForThunder = Time.timeSinceLevelLoad;
-                        break;
-                }
                 Instantiate(MagicMenuButtons.chosen.prefab, Staff.position+ MagicMenuButtons.chosen.prefab.transform.position, MagicMenuButtons.chosen.prefab.transform.rotation, null);
+
             }
             isShowing = false;
             menu.enabled = isShowing;
-
-            Time.timeScale = 1;
+            
 
         }
-
     }
 }

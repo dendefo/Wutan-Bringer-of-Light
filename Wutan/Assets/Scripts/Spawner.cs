@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] public float SpawnRate;
-    [SerializeField] List<Enemy> EnemyPrefabs;
+    [SerializeField] Enemy EnemyPrefab;
     private float LastSpawnTime = 0;
 
     void Start()
@@ -16,13 +16,13 @@ public class Spawner : MonoBehaviour
 
     void Update()
     {
-        if (Time.timeSinceLevelLoad > LastSpawnTime + SpawnRate)
+        if (Time.time > LastSpawnTime + SpawnRate)
         {
             if (Vector3.Distance(transform.position, GameManager.Instance.PlayerScriptplayer.transform.position) > GameManager.Instance.MinDistanceFromPlayerToSpawn)
             {
-                if (GameManager.Instance.Curve.Evaluate(Time.timeSinceLevelLoad) <= GameManager.Instance.Enemies.Count) return;
-                Instantiate(EnemyPrefabs[Random.Range(0, EnemyPrefabs.Count)],transform.position,Quaternion.identity,null);
-                LastSpawnTime = Time.timeSinceLevelLoad;
+                if (GameManager.Instance.Curve.Evaluate(Time.time) <= GameManager.Instance.Enemies.Count) return;
+                Instantiate(EnemyPrefab,transform.position,Quaternion.identity,null);
+                LastSpawnTime = Time.time;
             }
         }
     }

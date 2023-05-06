@@ -104,8 +104,6 @@ MonoBehaviour:
   Speed: 10
   JumpForce: 7000
   isTouchingFloor: 1
-  MaxHP: 100
-  CurrentHp: 100
   MaxEnemyDistance: 6
   Stuuf: {fileID: 815384892274151066}
 --- !u!70 &1201414363619789231
@@ -239,7 +237,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6191034906065268596}
-  m_LocalRotation: {x: -0.05872675, y: -0.9982741, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.27, y: 6.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -264,10 +262,10 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.47
+  m_Intensity: 0.43
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 0b35d1e600000000a97b784d8f9c2bac279bd4a685edb676bb646055
+  m_ApplyToSortingLayers: 00000000a97b784d8f9c2bac279bd4a685edb676bb646055
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -315,7 +313,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 2.6
-  m_PointLightOuterRadius: 25.011585
+  m_PointLightOuterRadius: 25.01
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
