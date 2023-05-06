@@ -25,6 +25,7 @@ public class ArmController : MonoBehaviour
         var Acos = Mathf.Acos(norm.y);
         var z = Acos / Mathf.PI * 180;
         transform.localEulerAngles = new Vector3(0, 0, z-90);
+
         if (mousePosScreen.x > Screen.width / 2)
         {
             GameManager.Instance.PlayerScriptplayer.IsLookingRight = true;
@@ -37,4 +38,9 @@ public class ArmController : MonoBehaviour
         }
         
     }
+    private void OnAnimatorIK()
+    {
+        ChangeRotation();
+    }
+    
 }

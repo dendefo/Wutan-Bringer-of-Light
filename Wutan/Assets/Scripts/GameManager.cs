@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject DieMenu;
     public GameObject HUD;
-
+    public AudioMixer SFXMixer;
 
     void Awake()
     {
@@ -26,5 +27,8 @@ public class GameManager : MonoBehaviour
         Time.timeScale= 0f;
         HUD.SetActive(false);
         DieMenu.SetActive(true);
+        Destroy(PlayerScriptplayer.gameObject);
+        //SFXMixer.SetFloat(SFXMixer.)
+
     }
 }

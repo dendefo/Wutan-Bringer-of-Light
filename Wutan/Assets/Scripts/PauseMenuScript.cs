@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenuScript : MonoBehaviour
 {
@@ -27,5 +28,9 @@ public class PauseMenuScript : MonoBehaviour
         PauseMenu.SetActive(false);
         GameManager.Instance.HUD.SetActive(true);
         Time.timeScale = 1.0f;
+    }
+    public void Load()
+    {
+        SceneManager.LoadScene(0);
     }
 }

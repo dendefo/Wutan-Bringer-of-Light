@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +10,9 @@ public class PlayerScript : Character
     public int CurrentHp;
     [SerializeField] public float MaxEnemyDistance;
     [SerializeField] public Transform Stuuf;
+    public AudioSource Attack1;
+    [SerializeField] AudioSource Attack2;
+    [SerializeField] public AudioSource Attack3;
     private void Update()
     {
 
@@ -42,12 +46,22 @@ public class PlayerScript : Character
     private void OnCollisionEnter2D(Collision2D collision)
     {
         base.OnCollisionEnter2D(collision);
-        if (collision.collider.tag == "Enemy") CurrentHp--;
+        if (collision.collider.tag == "Enemy")
+        {
+            CurrentHp--;
+            animator.SetTrigger("Hit");
+            Attack3.Play();
+        }
+
         if (CurrentHp <= 0) GameManager.Instance.Die();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "DeleteEnemy") GameManager.Instance.Die();
+    }
+    public void PlayAttackSound()
+    {
+        Attack2.Play();
     }
 
 }

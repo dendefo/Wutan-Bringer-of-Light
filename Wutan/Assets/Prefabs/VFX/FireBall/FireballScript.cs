@@ -9,6 +9,7 @@ public class FireballScript : MonoBehaviour
     public float LiveTime;
     public float timeAtStart;
     public float Speed;
+    [SerializeField] AudioSource Fly;
     void Awake()
     {
         StartPosition = transform.position;
@@ -23,7 +24,7 @@ public class FireballScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Time.timeSinceLevelLoad - timeAtStart > 1) Fly.Play();
         transform.position= Vector3.LerpUnclamped(StartPosition,TargetPosition,(Time.timeSinceLevelLoad-timeAtStart)/LiveTime);
         if (Time.timeSinceLevelLoad -timeAtStart > LiveTime) { Destroy(gameObject); }
     }

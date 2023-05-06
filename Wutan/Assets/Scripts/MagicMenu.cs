@@ -77,6 +77,14 @@ public class MagicMenu : MonoBehaviour
                         LastUseForThunder = Time.timeSinceLevelLoad;
                         break;
                 }
+                if (MagicMenuButtons.chosen.ability == Abilities.Light)
+                {
+                    GameManager.Instance.PlayerScriptplayer.animator.SetTrigger("Light");
+                }
+                else
+                {
+                    GameManager.Instance.PlayerScriptplayer.animator.SetTrigger("Spell");
+                }
                 Instantiate(MagicMenuButtons.chosen.prefab, Staff.position+ MagicMenuButtons.chosen.prefab.transform.position, MagicMenuButtons.chosen.prefab.transform.rotation, null);
             }
             isShowing = false;

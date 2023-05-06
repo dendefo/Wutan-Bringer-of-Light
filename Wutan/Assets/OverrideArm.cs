@@ -13,7 +13,6 @@ public class OverrideArm : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log("KEKEKE");
         ArmController.Instance.ChangeRotation();
     }
 
@@ -26,14 +25,13 @@ public class OverrideArm : StateMachineBehaviour
     // OnStateMove is called right after Animator.OnAnimatorMove()
     override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log("OLOLO");
         ArmController.Instance.ChangeRotation();
     }
 
     //OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    Debug.Log("OLOLO"); 
-    //    ArmController.Instance.ChangeRotation();
-    //}
+    override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        Debug.Log("OLOLO");
+        ArmController.Instance.ChangeRotation();
+    }
 }

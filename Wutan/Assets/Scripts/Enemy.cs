@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy : Character
@@ -62,6 +63,7 @@ public class Enemy : Character
         {
             Rigidbody2D.AddForce((collision.transform.position - transform.position) * -TakeDamageForce,ForceMode2D.Impulse);
             //Debug.Log("Trigger");
+            if (collision.gameObject.name=="Sword") GameManager.Instance.PlayerScriptplayer.Attack1.Play();
             animator.SetTrigger("Hit");
         }
     }
