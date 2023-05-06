@@ -17,15 +17,15 @@ public class FireballScript : MonoBehaviour
         TargetPosition *= Speed;
         TargetPosition = new(TargetPosition.x, TargetPosition.y);
         
-        timeAtStart= Time.time;
+        timeAtStart= Time.timeSinceLevelLoad;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        transform.position= Vector3.LerpUnclamped(StartPosition,TargetPosition,(Time.time-timeAtStart)/LiveTime);
-        if (Time.time -timeAtStart > LiveTime) { Destroy(gameObject); }
+        transform.position= Vector3.LerpUnclamped(StartPosition,TargetPosition,(Time.timeSinceLevelLoad-timeAtStart)/LiveTime);
+        if (Time.timeSinceLevelLoad -timeAtStart > LiveTime) { Destroy(gameObject); }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
