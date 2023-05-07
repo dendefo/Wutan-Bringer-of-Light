@@ -28,7 +28,7 @@ public class ArmController : MonoBehaviour
         float angle = Mathf.Acos(NormalJoystick.y) / Mathf.PI * 180;
         float z = angle;
         if (x < 0) angle = 360 - angle;
-        transform.localEulerAngles = new Vector3(0, 0, z-90);
+        transform.localEulerAngles = new Vector3(0, 0, 180-z+(z<180?-45:+45));
 
         if (angle<180)
         {
