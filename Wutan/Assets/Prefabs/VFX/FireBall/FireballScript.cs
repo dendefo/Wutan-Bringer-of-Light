@@ -16,10 +16,26 @@ public class FireballScript : MonoBehaviour
         StartPosition = transform.position;
         TargetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition)-StartPosition;
         TargetPosition = Vector3.Normalize(TargetPosition);
-        TargetPosition *= Speed;
-        TargetPosition = new(TargetPosition.x, TargetPosition.y);
-        float x = Input.GetAxis("Joystick Horizontal");
-        float y = Input.GetAxis("Joystick Vertical");
+        float x;
+        float y;
+        if (Gamepad.current != null)
+        {
+            if (Gamepad.current.layout == "XInputController")
+            {
+                x = Input.GetAxis("Joystick Horizontal1");
+                y = Input.GetAxis("Joystick Vertical1");
+            }
+            else
+            {
+                x = Input.GetAxis("Joystick Horizontal");
+                y = Input.GetAxis("Joystick Vertical");
+            }
+        }
+        else
+        {
+            x = Input.mousePosition.x - Screen.width / 2;
+            y = Input.mousePosition.y - Screen.height / 2;
+        }
         Vector2 NormalJoystick = new Vector2(x, y);
         NormalJoystick.Normalize();
         TargetPosition = NormalJoystick*Speed;

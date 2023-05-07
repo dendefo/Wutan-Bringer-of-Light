@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 public class ArmController : MonoBehaviour
 {
     public static ArmController Instance;
@@ -21,8 +24,26 @@ public class ArmController : MonoBehaviour
         Vector3 targetPos = new Vector3(mousePosWorld.x, mousePosWorld.y, armPos.z);
 
         // Check if the angle is within the range of 0-90 or 270-360 degrees
-        float x = Input.GetAxis("Joystick Horizontal");
-        float y = Input.GetAxis("Joystick Vertical");
+        float x;
+        float y;
+        if (Gamepad.current != null)
+        {
+            if (Gamepad.current.layout == "XInputController")
+            {
+                x = Input.GetAxis("Joystick Horizontal1");
+                y = Input.GetAxis("Joystick Vertical1");
+            }
+            else
+            {
+                x = Input.GetAxis("Joystick Horizontal");
+                y = Input.GetAxis("Joystick Vertical");
+            }
+        }
+        else
+        {
+            x = Input.mousePosition.x- Screen.width / 2 ;
+            y = Input.mousePosition.y- Screen.height / 2 ;
+        }
         Vector2 NormalJoystick = new Vector2(x, y);
         NormalJoystick.Normalize();
         float angle = Mathf.Acos(NormalJoystick.y) / Mathf.PI * 180;

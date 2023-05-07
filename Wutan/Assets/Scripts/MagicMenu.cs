@@ -95,6 +95,7 @@ public class MagicMenu : MonoBehaviour
             Time.timeScale = 1;
 
         }
+        if (Gamepad.current == null) return;
         if (Input.GetAxis("ChoseSpell") != 0)
         {
             menu.enabled = isShowing;

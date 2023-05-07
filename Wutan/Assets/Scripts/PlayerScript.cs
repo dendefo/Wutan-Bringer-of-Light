@@ -19,8 +19,26 @@ public class PlayerScript : Character
 
         if (Input.GetMouseButtonDown(0)) animator.SetTrigger("Attack");
         if (Input.GetAxis("Attack")!=0) animator.SetTrigger("Attack");
-        float x = Input.GetAxis("Joystick Horizontal");
-        float y = Input.GetAxis("Joystick Vertical");
+        float x;
+        float y;
+        if (Gamepad.current!=null)
+        {
+            if (Gamepad.current.layout == "XInputController")
+            {
+                x = Input.GetAxis("Joystick Horizontal1");
+                y = Input.GetAxis("Joystick Vertical1");
+            }
+            else
+            {
+                x = Input.GetAxis("Joystick Horizontal");
+                y = Input.GetAxis("Joystick Vertical");
+            }
+        }
+        else
+        {
+            x = Input.mousePosition.x - Screen.width / 2;
+            y = Input.mousePosition.y - Screen.height / 2;
+        }
         Vector2 NormalJoystick = new Vector2(x, y);
         NormalJoystick.Normalize();
         float angle = Mathf.Acos(NormalJoystick.y) / Mathf.PI * 180;
