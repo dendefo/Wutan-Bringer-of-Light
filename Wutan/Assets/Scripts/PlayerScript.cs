@@ -25,7 +25,7 @@ public class PlayerScript : Character
         if (Gamepad.current!=null)
         {
             Debug.Log(Gamepad.current.layout);
-            if (Gamepad.current.layout == "XInputController")
+            if (Gamepad.current.layout == "XInputControllerWindows")
             {
                 x = Input.GetAxis("Joystick Horizontal1");
                 y = Input.GetAxis("Joystick Vertical1");

@@ -28,7 +28,7 @@ public class ArmController : MonoBehaviour
         float y;
         if (Gamepad.current != null)
         {
-            if (Gamepad.current.layout == "XInputController")
+            if (Gamepad.current.layout == "XInputControllerWindows")
             {
                 x = Input.GetAxis("Joystick Horizontal1");
                 y = Input.GetAxis("Joystick Vertical1");

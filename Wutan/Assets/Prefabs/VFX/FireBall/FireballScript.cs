@@ -21,7 +21,7 @@ public class FireballScript : MonoBehaviour
 
         if (Gamepad.current != null)
         {
-            if (Gamepad.current.layout == "XInputController")
+            if (Gamepad.current.layout == "XInputControllerWindows")
             {
                 x = Input.GetAxis("Joystick Horizontal1");
                 y = Input.GetAxis("Joystick Vertical1");
