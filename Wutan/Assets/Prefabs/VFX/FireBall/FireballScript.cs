@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class FireballScript : MonoBehaviour
 {
@@ -17,8 +18,14 @@ public class FireballScript : MonoBehaviour
         TargetPosition = Vector3.Normalize(TargetPosition);
         TargetPosition *= Speed;
         TargetPosition = new(TargetPosition.x, TargetPosition.y);
-        
-        timeAtStart= Time.timeSinceLevelLoad;
+        float x = Input.GetAxis("Joystick Horizontal");
+        float y = Input.GetAxis("Joystick Vertical");
+        Vector2 NormalJoystick = new Vector2(x, y);
+        NormalJoystick.Normalize();
+        TargetPosition = NormalJoystick*Speed;
+
+
+        timeAtStart = Time.timeSinceLevelLoad;
     }
 
     // Update is called once per frame

@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.UI;
+using static UnityEditor.Searcher.SearcherWindow.Alignment;
+
 public class MagicMenu : MonoBehaviour
 {
     public Canvas menu; // Assign in inspector
@@ -50,7 +52,7 @@ public class MagicMenu : MonoBehaviour
             }
             isShowing = true;
         }
-        else if (Input.GetMouseButtonUp(1))
+        else if (Input.GetMouseButtonUp(1)||Input.GetAxis("Spell")!=0)
         {
             if (MagicMenuButtons.chosen != null&& !isShowing)
             {
@@ -92,6 +94,26 @@ public class MagicMenu : MonoBehaviour
 
             Time.timeScale = 1;
 
+        }
+        if (Input.GetAxis("ChoseSpell") != 0)
+        {
+            menu.enabled = isShowing;
+            if (!isShowing)
+            {
+                //Vector2 mousePos = new Vector2(Input.GetAxis("Joystick Horizontal"),Input.GetAxis("Joystick Vertical"));
+                //Parent.transform.position = mousePos;
+                Time.timeScale = 0.1f;
+            }
+            isShowing = true;
+        }
+        else if (Input.GetAxis("ChoseSpell") == 0)
+        {
+
+
+            isShowing = false;
+            menu.enabled = isShowing;
+
+            Time.timeScale = 1;
         }
 
     }

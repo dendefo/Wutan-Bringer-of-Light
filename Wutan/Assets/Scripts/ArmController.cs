@@ -21,12 +21,16 @@ public class ArmController : MonoBehaviour
         Vector3 targetPos = new Vector3(mousePosWorld.x, mousePosWorld.y, armPos.z);
 
         // Check if the angle is within the range of 0-90 or 270-360 degrees
-        var norm = Vector3.Normalize(armPos - targetPos);
-        var Acos = Mathf.Acos(norm.y);
-        var z = Acos / Mathf.PI * 180;
+        float x = Input.GetAxis("Joystick Horizontal");
+        float y = Input.GetAxis("Joystick Vertical");
+        Vector2 NormalJoystick = new Vector2(x, y);
+        NormalJoystick.Normalize();
+        float angle = Mathf.Acos(NormalJoystick.y) / Mathf.PI * 180;
+        float z = angle;
+        if (x < 0) angle = 360 - angle;
         transform.localEulerAngles = new Vector3(0, 0, z-90);
 
-        if (mousePosScreen.x > Screen.width / 2)
+        if (angle<180)
         {
             GameManager.Instance.PlayerScriptplayer.IsLookingRight = true;
 

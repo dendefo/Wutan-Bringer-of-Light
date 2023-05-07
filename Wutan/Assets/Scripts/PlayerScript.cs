@@ -13,10 +13,19 @@ public class PlayerScript : Character
     public AudioSource Attack1;
     [SerializeField] AudioSource Attack2;
     [SerializeField] public AudioSource Attack3;
+    public float StickAngle;
     private void Update()
     {
 
         if (Input.GetMouseButtonDown(0)) animator.SetTrigger("Attack");
+        if (Input.GetAxis("Attack")!=0) animator.SetTrigger("Attack");
+        float x = Input.GetAxis("Joystick Horizontal");
+        float y = Input.GetAxis("Joystick Vertical");
+        Vector2 NormalJoystick = new Vector2(x, y);
+        NormalJoystick.Normalize();
+        float angle = Mathf.Acos(NormalJoystick.y) / Mathf.PI * 180;
+        if (x < 0) angle = 360 - angle;
+        StickAngle= angle;
     }
     private void FixedUpdate()
     {
@@ -63,5 +72,8 @@ public class PlayerScript : Character
     {
         Attack2.Play();
     }
-
+    public void ResetAttackTrigger()
+    {
+        animator.ResetTrigger("Attack");
+    }
 }

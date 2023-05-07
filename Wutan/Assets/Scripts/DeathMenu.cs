@@ -7,6 +7,7 @@ public class DeathMenu : MonoBehaviour
 {
     public GameObject deathMenuUI;
     
+    
     public void LoadMenu()
     {
         Time.timeScale = 1;
