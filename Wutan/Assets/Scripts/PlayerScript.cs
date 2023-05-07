@@ -21,8 +21,10 @@ public class PlayerScript : Character
         if (Input.GetAxis("Attack")!=0) animator.SetTrigger("Attack");
         float x;
         float y;
+
         if (Gamepad.current!=null)
         {
+            Debug.Log(Gamepad.current.layout);
             if (Gamepad.current.layout == "XInputController")
             {
                 x = Input.GetAxis("Joystick Horizontal1");

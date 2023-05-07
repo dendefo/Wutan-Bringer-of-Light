@@ -18,6 +18,7 @@ public class FireballScript : MonoBehaviour
         TargetPosition = Vector3.Normalize(TargetPosition);
         float x;
         float y;
+
         if (Gamepad.current != null)
         {
             if (Gamepad.current.layout == "XInputController")
