@@ -18,11 +18,12 @@ public class PlayerScript : Character
     {
 
         if (Input.GetMouseButtonDown(0)) animator.SetTrigger("Attack");
-        if (Input.GetAxis("Attack")!=0) animator.SetTrigger("Attack");
+        if (Input.GetAxis("Attack") != 0 && Gamepad.current.layout != "XInputControllerWindows") animator.SetTrigger("Attack");
+        else if ((Input.GetAxis("Attack1") != 0 && Gamepad.current.layout == "XInputControllerWindows")) ;
         float x;
         float y;
 
-        if (Gamepad.current!=null)
+        if (Gamepad.current != null)
         {
             Debug.Log(Gamepad.current.layout);
             if (Gamepad.current.layout == "XInputControllerWindows")
@@ -45,7 +46,7 @@ public class PlayerScript : Character
         NormalJoystick.Normalize();
         float angle = Mathf.Acos(NormalJoystick.y) / Mathf.PI * 180;
         if (x < 0) angle = 360 - angle;
-        StickAngle= angle;
+        StickAngle = angle;
     }
     private void FixedUpdate()
     {
