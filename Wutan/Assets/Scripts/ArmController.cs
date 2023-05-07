@@ -28,23 +28,33 @@ public class ArmController : MonoBehaviour
         float angle = Mathf.Acos(NormalJoystick.y) / Mathf.PI * 180;
         float z = angle;
         if (x < 0) angle = 360 - angle;
-        transform.localEulerAngles = new Vector3(0, 0, 180-z+(z<180?-45:+45));
-
-        if (angle<180)
+        transform.localEulerAngles = new Vector3(0, 0, 180 - z + (z < 180 ? -45 : +45));
+        if (Input.GetAxis("Horizontal") < 0)
+        {
+            GameManager.Instance.PlayerScriptplayer.IsLookingRight = false;
+        }
+        else if (Input.GetAxis("Horizontal") > 0)
         {
             GameManager.Instance.PlayerScriptplayer.IsLookingRight = true;
-
         }
         else
         {
-            GameManager.Instance.PlayerScriptplayer.IsLookingRight = false;
+            if (angle < 180)
+            {
+                GameManager.Instance.PlayerScriptplayer.IsLookingRight = true;
 
+            }
+            else
+            {
+                GameManager.Instance.PlayerScriptplayer.IsLookingRight = false;
+
+            }
         }
-        
+
     }
     private void OnAnimatorIK()
     {
         ChangeRotation();
     }
-    
+
 }
